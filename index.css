@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+ 
+}
+.sub{
+    font-size: 9px;
+    color: #b8b8b8;
+    margin-left: -9px;
+}
+.hover_element{
+    padding: .6rem;
+    border-radius: 12px;
+ 
+}
+
+.active{
+    background-color:#e3e2fe;
+}
+.hover_element:hover{
+    background-color: #e9e4e4;
+    opacity: 96%;
+    cursor: pointer;
+    
+}
+
+.group{
+    background-color: #6965db;
+    color: #fff;
+}
+
+/* Responsive */
+aside {
+    background-color: transparent;
+    width: 55px;
+    height: auto;
+    margin-right: -9rem;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    position: fixed;
+    top: 8rem;
+    right: 10.2rem;
+    padding: 1rem 1rem;
+    margin-right: -10rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+
+}
+aside div{
+    width: 55px;
+}
+
+.span-container{
+    margin-right: auto;
+    
+    
+}
+.span-container {
+    height: 80%;
+    width: 90%;
+    background-position: center;
+}
+.responsive-1:hover{
+
+    cursor: pointer;
+    width: 60%;
+    height: 90%;
+    background-position: center; 
+ 
+
+    
+}
+
+.responsive{
+
+ display: none; 
+
+
+}
+.responsive span{
+    width: .625rem;
+    height: .625rem;
+    background-color: white;
+}
+.zoom{
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    /* display: none !important; */
+}
+.zoom div span{
+    display: block !important;
+}
+.section2{
+    display: none !important;
+}
+.zoom span{
+    padding: .3rem 0.625rem;
+    /* border: 0.1rem solid #3d3d3d; */
+    /* opacity: 96%; */
+}
+#remove{
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; 
+}
+#add {
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.undo-redo1 span {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.undo-redo2 > span{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.help-path{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+.help-path > span{
+    width: 2rem;
+    height: 1.8rem;
+    padding: 5px;
+    color: purple;
+}
+.help-path button{
+    border: 1px solid #3d3d3d ;
+    border-radius: 8px;
+    color: #000;
+    
+}
+.help-path span , .help-path button , .undo-redo1, .undo-redo2{
+    display: block !important;
+}
+.centered-button {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    /* padding: 10px;  */
+    color: #fff; 
+    border: none;
+    cursor: pointer; 
+    width:2.25rem ;
+    height:2.25rem ;
+    
+}
+
+.footer1{
+    display: block !important;
+}
+
+.footer2,.footer2 div span{
+    display: none !important;
+}
+
+
+
+
+@media screen and (max-width:796px) {
+    sub{
+        display:none;
+    }
+    
+}
+
+@media screen and (max-width:730px) {
+
+    nav{
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+    .group1,.library,#books,#menu{
+        display: none !important;
+    }
+    .responsive,footer{
+        display: block !important;
+   
+    }
+    .footer2{
+        width: 100%;
+        margin: auto;
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        bottom: 2rem;
+        flex-wrap: nowrap;
+        
+
+    }
+    /* Footer1 */
+    .zoom div span{ 
+        display: none !important;
+    }
+    .help-path span , .help-path button , .undo-redo1, .undo-redo2{
+        display: none !important;
+    }
+    .footer{
+        display: block !important;
+    }
+    .footer2 div span{
+        display: block !important;
+        
+    }
+
+    .footer2{
+        box-shadow: 1px 1px 8px black;
+    }
+}
+
