@@ -3,112 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQTaThNBugoU0QgahB6Tq-PhiRU1iC9avLw&usqp=CAU" type="image/x-icon">
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQTaThNBugoU0QgahB6Tq-PhiRU1iC9avLw&usqp=CAU" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-
+    <link rel="stylesheet" href="index.css" />
     <title>ExcaliDraw</title>
   </head>
+
   <body>
-    <header>
-      <nav
-        class="container-fluid d-flex justify-content-between align-items-center position-relative py-3"
+    <nav>
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center w-full"
       >
-        <div class="p-3">
-          <span class="material-symbols-outlined" id="menu"> menu </span>
+        <div class="p-3" id="menu">
+          <span
+            class="md:d-block material-symbols-outlined d-none md:d-block"
+            id="menu"
+          >
+            menu
+          </span>
         </div>
 
         <div
-          class="border border-dark-500 rounded-3 shadow px-3 py-1 flex-1"
+          class="border border-dark-500 rounded-3 shadow flex-1"
           id="toolbar"
         >
-          <div class="d-flex align-items-center justify-content-between gap-3">
-            <div>
-              <span class="material-symbols-outlined hover_element" id="lock">
+          <div
+            class="d-flex align-items-center py-1 px-1 md:py-2 px-2  justify-content-between gap-3"
+          >
+            <div class="icon-container mx-auto">
+              <span
+                class="material-symbols-outlined hover_element"
+                id="lock"
+              >
                 lock </span
               ><sub></sub>
             </div>
-            <div>
+            <button class="icon-container mx-auto" id="hand">
               <span
-                class="material-symbols-outlined hover_element active"
+                class="material-symbols-outlined hover_element"
                 id="pan-tool"
               >
                 pan_tool </span
               ><sub></sub>
-            </div>
-            <div>
+            </bu>
+            <button class="icon-container mx-auto mouse" id="mouse">
               <span class="material-symbols-outlined hover_element">
                 arrow_selector_tool
               </span>
               <sub class="sub">1</sub>
-            </div>
+            </b>
 
-            <div>
+            <button class="icon-container mx-auto rectangle" id="rectangle">
               <span class="material-symbols-outlined hover_element">
                 check_box_outline_blank
               </span>
               <sub class="sub">2</sub>
-            </div>
+            </button>
 
-            <div>
+            <button class="icon-container mx-auto outline-none" id="circle">
               <span class="material-symbols-outlined hover_element">
                 circle
               </span>
               <sub class="sub">4</sub>
-            </div>
+            </button>
 
-            <div>
+            <button class="icon-container outline-none " id="right-arrow">
               <span class="material-symbols-outlined hover_element">
                 arrow_right_alt
               </span>
               <sub class="sub">5</sub>
-            </div>
+            </button>
 
-            <div>
+            <button class="icon-container outline-none" id="horizontal">
               <span class="material-symbols-outlined hover_element">
                 horizontal_rule
               </span>
               <sub class="sub">6</sub>
-            </div>
+            </button>
 
-            <div>
-              <span class="material-symbols-outlined hover_element">
+            <button class="icon-container outline-none" id="pencil">
+              <span class="material-symbols-outlined hover_element"  >
                 edit
               </span>
               <sub class="sub">7</sub>
+            </button>
+            
+            <div class="icon-container">
+              <span class="material-symbols-outlined">
+                text_fields
+                </span>
+                <sub class="sub">8</sub>
             </div>
 
-            <div>
+            <div class="icon-container Text">
               <span class="material-symbols-outlined hover_element">
                 image
               </span>
               <sub class="sub"> 9 </sub>
             </div>
 
-            <div>
+            <div class="icon-container eraser">
               <span class="material-symbols-outlined hover_element">
                 ink_eraser
               </span>
@@ -116,112 +117,150 @@
             </div>
 
             <div>
-              <span class="material-symbols-outlined hover_element">
+              <span class="material-symbols-outlined">
+                category
+                </span>
+            </div>
+
+            <!-- <div class="icon-container">
+              <span class="material-symbols-outlined"> fence </span>
+            </div> -->
+
+            <!-- <div class="d-flex -gap-1">
+              <span class="material-symbols-outlined"> arrow_back_ios </span>
+              <span class="material-symbols-outlined"> arrow_forward_ios </span>
+            </div> -->
+
+            <div>
+              <span
+                class="material-symbols-outlined hover_element d-none md:d-block"
+              >
                 more
               </span>
             </div>
           </div>
         </div>
 
-        <div
-          class="d-flex align-items-center justify-content-between gap-3 px-3 p-3 group1"
-        >
-          <div class="group px-2 py-1 rounded-2">
-            <span class="material-symbols-outlined"> group </span>
+        <div class="books-user d-flex align-items-center gap-3">
+          <div class="">
+            <span
+              class="material-symbols-outlined d-none md:d-block p-2 rounded-3"
+              id="user"
+            >
+              group
+            </span>
           </div>
 
-          <div
-            class="border-none border border-dark-50 d-flex align-items-center px-3 py-2 rounded-2 gap-3 library"
-          >
-            <span class="material-symbols-outlined" id="books">
+          <div class="d-none d-md-flex align-items-center gap-3 p-2 Library-txt md:border border-dark-500">
+            <span class="material-symbols-outlined d-none md:d-block" id="books">
               dictionary
             </span>
-            <span class="library">Library</span>
+            <span class="">Library</span>
           </div>
         </div>
-      </nav>
-    </header>
-    <!-- Respnsive -->
+      </div>
+    </nav>
 
-    <aside class="responsive shadow border border-dark-500">
-      <div class="d-flex flex-column mx-auto">
-        <div class="span-container py-2">
-          <span class="material-symbols-outlined responsive-1 mx-auto"
-            >dictionary</span
-          >
+    <!-- Canvas -->
+    <canvas id="canvas" width="" height=""></canvas>
+
+    <main class="main">
+      <section class="md:d-none">
+        <aside
+          class="d-block shadow d-flex justify-content-end align-items-center md:d-none"
+        >
+          <div class="d-flex flex-column py-2 mx-auto rounded-3 md\:d-none">
+            <div class="py-1">
+              <span class="material-symbols-outlined responsive-1 mx-auto"
+                >dictionary</span
+              >
+            </div>
+            <div class="py-1">
+              <span class="material-symbols-outlined responsive-1 mx-auto"
+                >lock</span
+              >
+            </div>
+            <div class="py-1">
+              <span class="material-symbols-outlined responsive-1 mx-auto"
+                >pan_tool</span
+              >
+            </div>
+          </div>
+        </aside>
+      </section>
+
+    </main>
+   
+
+    <footer class="md:d-none">
+      <div
+        class="footer1 container-fluid d-flex justify-content-between mx-auto shadow"
+      >
+        <div class="p-3">
+          <span class="material-symbols-outlined md:d-none" id="menu">
+            menu
+          </span>
         </div>
-
-        <div class="span-container py-2">
-          <span class="material-symbols-outlined responsive-1 mx-auto"
-            >lock</span
-          ><sub></sub>
+        <div class="p-3">
+          <span class="material-symbols-outlined"> undo </span>
         </div>
-
-        <div class="span-container py-2">
-          <span class="material-symbols-outlined responsive-1 mx-auto"
-            >pan_tool</span
-          ><sub></sub>
+        <div class="p-3">
+          <span class="material-symbols-outlined"> redo </span>
         </div>
       </div>
-    </aside>
+    </footer>
 
-    <footer class="d-flex justify-content-between footer1">
-      <div class="d-flex gap-3 zoom">
-        <div class="d-flex align-items-center">
+    <footer>
+      <div class="container-fluid footer2 d-flex align-items-center">
+        <div class="d-flex align-items-center py-4 px-2 footer2-subcontainer">
           <span
-            class="material-symbols-outlined border border-dark-500"
+            class="material-symbols-outlined border border-dark-500 py-2 px-3"
             id="remove"
             >remove</span
           >
-          <span class="border border-dark-500">100%</span>
+          <span class="border border-dark-500 py-2 px-3">100%</span>
           <span
-            class="material-symbols-outlined border border-dark-500"
+            class="material-symbols-outlined border border-dark-500 py-2 px-3"
             id="add"
             >add</span
           >
         </div>
-        <div class="undo-redo d-flex">
-          <div class="undo-redo1">
-            <span class="material-symbols-outlined border border-dark-500"
-              >undo</span
-            >
+
+        <div class="footer2-subcontainer3">
+          <div class="d-flex align-items-center">
+            <div class="undo">
+              <span
+                class="material-symbols-outlined border border-dark-500 py-2 px-3"
+                >undo</span
+              >
+            </div>
+            <div class="redo">
+              <span
+                class="material-symbols-outlined border border-dark-500 py-2 px-3"
+                >redo</span
+              >
+            </div>
           </div>
-          <div class="undo-redo2">
-            <span class="material-symbols-outlined border border-dark-500"
-              >redo</span
+
+          <div class="d-flex justify-content-center align-items-center gap-3">
+            <div
+              class="d-flex justify-content-end align-items-center verified-user"
             >
+              <span class="material-symbols-outlined">verified_user</span>
+            </div>
+
+            <div class="help-btn">
+              <button class="rounded-3 shadow border border-dark-500">
+                <span class="material-symbols-outlined py-2 px-2">help</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="help-path d-flex gap-2">
-        <span class="material-symbols-outlined">verified_user</span>
-        <button class="centered-button">
-          <span class="material-symbols-outlined">help</span>
-        </button>
-      </div>
     </footer>
 
-    <!-- Second Footer - Displayed below 730px -->
-    <footer
-      class="footer2 container-fluid d-flex justify-content-between p-3 m-auto md:shadow rounded-2"
-    >
-      <div><span class="material-symbols-outlined">menu</span></div>
-      <div>
-        <span class="material-symbols-outlined border border-dark-500"
-          >undo</span
-        >
-      </div>
-      <div>
-        <span class="material-symbols-outlined border border-dark-500"
-          >redo</span
-        >
-      </div>
-    </footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"></script>
+    <script src="index.js"></script>
+   
   </body>
 </html>
