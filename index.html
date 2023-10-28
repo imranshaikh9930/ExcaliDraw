@@ -3,10 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQTaThNBugoU0QgahB6Tq-PhiRU1iC9avLw&usqp=CAU" type="image/x-icon">
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQTaThNBugoU0QgahB6Tq-PhiRU1iC9avLw&usqp=CAU"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
     />
     <link
       rel="stylesheet"
@@ -19,12 +27,12 @@
   <body>
     <nav>
       <div
-        class="container-fluid d-flex justify-content-between align-items-center w-full"
+        class="container-fluid d-flex justify-content-center md:d-flex justify-content-between align-items-center w-full"
       >
         <div class="p-3" id="menu">
           <span
-            class="md:d-block material-symbols-outlined d-none md:d-block"
-            id="menu"
+            class="material-symbols-outlined d-none md:d-block"
+            onclick="toggleMenu()"
           >
             menu
           </span>
@@ -35,16 +43,15 @@
           id="toolbar"
         >
           <div
-            class="d-flex align-items-center py-1 px-1 md:py-2 px-2  justify-content-between gap-3"
+            class="d-flex align-items-center py-1 px-1 md:py-2 px-2 justify-content-between gap-3"
+            id="actionbuttons"
           >
             <div class="icon-container mx-auto">
-              <span
-                class="material-symbols-outlined hover_element"
-                id="lock"
-              >
+              <span class="material-symbols-outlined hover_element" id="lock">
                 lock </span
               ><sub></sub>
             </div>
+
             <button class="icon-container mx-auto" id="hand">
               <span
                 class="material-symbols-outlined hover_element"
@@ -52,54 +59,73 @@
               >
                 pan_tool </span
               ><sub></sub>
-            </bu>
+            </button>
+
             <button class="icon-container mx-auto mouse" id="mouse">
               <span class="material-symbols-outlined hover_element">
                 arrow_selector_tool
               </span>
               <sub class="sub">1</sub>
-            </b>
+            </button>
 
-            <button class="icon-container mx-auto rectangle" id="rectangle">
+            <button
+              class="icon-container mx-auto rectangle"
+              id="rectangle"
+              onclick="onActionClick(this)"
+            >
               <span class="material-symbols-outlined hover_element">
                 check_box_outline_blank
               </span>
               <sub class="sub">2</sub>
             </button>
 
-            <button class="icon-container mx-auto outline-none" id="circle">
+            <button
+              class="icon-container mx-auto outline-none"
+              id="circle"
+              onclick="onActionClick(this)"
+            >
               <span class="material-symbols-outlined hover_element">
                 circle
               </span>
               <sub class="sub">4</sub>
             </button>
 
-            <button class="icon-container outline-none " id="right-arrow">
+            <button
+              class="icon-container outline-none"
+              id="right-arrow"
+              onclick="onActionClick(this)"
+            >
               <span class="material-symbols-outlined hover_element">
                 arrow_right_alt
               </span>
               <sub class="sub">5</sub>
             </button>
 
-            <button class="icon-container outline-none" id="horizontal">
+            <button
+              class="icon-container outline-none"
+              id="line"
+              onclick="onActionClick(this)"
+            >
               <span class="material-symbols-outlined hover_element">
                 horizontal_rule
               </span>
               <sub class="sub">6</sub>
             </button>
 
-            <button class="icon-container outline-none" id="pencil">
-              <span class="material-symbols-outlined hover_element"  >
+            <button
+              class="icon-container outline-none"
+              onclick="onActionClick(this)"
+              id="freehand"
+            >
+              <span class="material-symbols-outlined hover_element">
                 edit
               </span>
               <sub class="sub">7</sub>
             </button>
-            
+
             <div class="icon-container">
-              <span class="material-symbols-outlined">
-                text_fields
-                </span>
-                <sub class="sub">8</sub>
+              <span class="material-symbols-outlined"> text_fields </span>
+              <sub class="sub">8</sub>
             </div>
 
             <div class="icon-container Text">
@@ -109,7 +135,11 @@
               <sub class="sub"> 9 </sub>
             </div>
 
-            <div class="icon-container eraser">
+            <div
+              class="icon-container eraser"
+              id="eraser"
+              onclick="onActionClick(this)"
+            >
               <span class="material-symbols-outlined hover_element">
                 ink_eraser
               </span>
@@ -117,9 +147,7 @@
             </div>
 
             <div>
-              <span class="material-symbols-outlined">
-                category
-                </span>
+              <span class="material-symbols-outlined"> category </span>
             </div>
 
             <!-- <div class="icon-container">
@@ -151,8 +179,13 @@
             </span>
           </div>
 
-          <div class="d-none d-md-flex align-items-center gap-3 p-2 Library-txt md:border border-dark-500">
-            <span class="material-symbols-outlined d-none md:d-block" id="books">
+          <div
+            class="d-none d-md-flex align-items-center gap-3 p-2 Library-txt md:border border-dark-500"
+          >
+            <span
+              class="material-symbols-outlined d-none md:d-block"
+              id="books"
+            >
               dictionary
             </span>
             <span class="">Library</span>
@@ -160,6 +193,25 @@
         </div>
       </div>
     </nav>
+
+    <div class="form hide">
+      <label for="strokewidth">Stroke Width</label>
+      <input
+        type="range"
+        id="strokewidth"
+        name="strokewidth"
+        min="3"
+        max="10"
+        oninput="onInput(this)"
+      />
+      <label for="strokestyle">Stroke Color</label>
+      <input
+        type="color"
+        name="strokestyle"
+        id="strokestyle"
+        oninput="onInput(this)"
+      />
+    </div>
 
     <!-- Canvas -->
     <canvas id="canvas" width="" height=""></canvas>
@@ -188,25 +240,32 @@
           </div>
         </aside>
       </section>
-
     </main>
-   
 
     <footer class="md:d-none">
       <div
         class="footer1 container-fluid d-flex justify-content-between mx-auto shadow"
       >
-        <div class="p-3">
-          <span class="material-symbols-outlined md:d-none" id="menu">
+        <div class="p-3" id="menu">
+          <span
+            class="material-symbols-outlined md:d-none"
+            onclick="toggleMenu()"
+          >
             menu
           </span>
         </div>
-        <div class="p-3">
+        <button
+          class="p-3 cursor-pointer border border-none bg-transparent"
+          id="undo1"
+        >
           <span class="material-symbols-outlined"> undo </span>
-        </div>
-        <div class="p-3">
+        </button>
+        <button
+          class="p-3 cursor-pointer border border-none bg-transparent"
+          id="redo1"
+        >
           <span class="material-symbols-outlined"> redo </span>
-        </div>
+        </button>
       </div>
     </footer>
 
@@ -228,17 +287,17 @@
 
         <div class="footer2-subcontainer3">
           <div class="d-flex align-items-center">
-            <div class="undo">
+            <div class="undo" id="undo">
               <span
                 class="material-symbols-outlined border border-dark-500 py-2 px-3"
-                >undo</span
-              >
+                >undo
+              </span>
             </div>
-            <div class="redo">
+            <div class="redo" id="redo">
               <span
                 class="material-symbols-outlined border border-dark-500 py-2 px-3"
-                >redo</span
-              >
+                >redo
+              </span>
             </div>
           </div>
 
@@ -260,7 +319,9 @@
     </footer>
 
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"></script>
-    <script src="index.js"></script>
-   
+
+    <script src="state.js"></script>
+    <script src="drawing.js"></script>
+    <script src="undoredo.js"></script>
   </body>
 </html>
